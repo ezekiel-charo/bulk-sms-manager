@@ -42,7 +42,6 @@ DB_PASSWORD=
 ## Running the project
 
 - Run `npm install` command to install required npm packages.
-- Run `npm run build` command to compile the frontend.
 - Run `composer install` command to install required php packages.
 - Run `composer run dev` command to start the project.
 - Visit [localhost:8000](localhost:8000) to access the application.

@@ -3,18 +3,9 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
-    --color-primary: var(--primary);
-}
-
-body {
-    font-family: 'Poppins', 'Helvetica Neue', sans-serif;
-}
-
-.dark {
-    color: white;
+    --color-primary: #00a63e;
+    --font-poppins: 'Poppins', sans-serif;
 }
 
 @layer components {
