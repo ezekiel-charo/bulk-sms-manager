@@ -1,20 +1,19 @@
 <script lang="ts" setup>
 import Logo from '@/components/Logo.vue';
 import { SharedData } from '@/types';
-import { Link, usePage } from '@inertiajs/vue3';
+import { Link, router, usePage } from '@inertiajs/vue3';
 import { ContactRound, LogOut, MessageSquareMore } from 'lucide-vue-next';
 
 const page = usePage<SharedData>();
 
 function logOut() {
-    // TODO: logout logic
-    console.log('loggin out...');
+    router.post('logout');
 }
 </script>
 
 <template>
     <div class="relative h-dvh p-8">
-        <div class="mb-24 flex items-center">
+        <div class="mb-34 flex items-center">
             <Logo />
         </div>
 

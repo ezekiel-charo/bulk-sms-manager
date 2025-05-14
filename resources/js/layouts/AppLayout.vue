@@ -9,7 +9,7 @@ import SideNav from '@/components/SideNav.vue';
     </div>
 
     <div class="md:ms-[200px]">
-        <div class="mt-10 p-4 sm:mb-8 lg:px-10 lg:ps-20">
+        <div class="mt-10 p-4 pb-24 sm:mb-8 lg:px-10 lg:ps-20">
             <slot />
         </div>
     </div>
