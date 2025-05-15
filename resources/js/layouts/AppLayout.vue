@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BottomMenu from '@/components/BottomMenu.vue';
+import BottomNav from '@/components/BottomNav.vue';
 import SideNav from '@/components/SideNav.vue';
 import TopBar from '@/components/TopBar.vue';
 </script>
@@ -20,6 +20,6 @@ import TopBar from '@/components/TopBar.vue';
     </div>
 
     <div class="fixed right-0 bottom-0 left-0 bg-slate-50 md:hidden dark:bg-slate-900">
-        <BottomMenu />
+        <BottomNav />
     </div>
 </template>

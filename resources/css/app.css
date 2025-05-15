@@ -10,7 +10,7 @@
 
 @layer components {
     .btn {
-        @apply inline-flex items-center justify-center gap-1 rounded-lg px-3 py-2 bg-slate-100 hover:bg-slate-200 dark:hover:bg-slate-800 dark:hover:text-white;
+        @apply inline-flex items-center justify-center gap-1 rounded-lg bg-slate-100 px-3 py-2 hover:bg-slate-200 dark:hover:bg-slate-800 dark:hover:text-white;
     }
 
     .btn-primary {
@@ -35,11 +35,20 @@
     }
 
     .bottom-nav-item {
-        @apply flex flex-1 cursor-pointer flex-col items-center px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300;
+        @apply flex cursor-pointer flex-col items-center px-3 py-2 text-sm font-semibold text-gray-700 dark:text-gray-300;
+    }
+
+    .bottom-nav-item .icon {
+        @apply rounded-lg p-1 mb-1;
     }
 
     .bottom-nav-item.active,
     .bottom-nav-item:hover {
-        @apply text-green-800 font-semibold;
+        @apply text-green-800;
+    }
+
+    .bottom-nav-item.active .icon,
+    .bottom-nav-item:hover .icon {
+        @apply bg-green-800 text-white;
     }
 }

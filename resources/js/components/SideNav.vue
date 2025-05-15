@@ -2,7 +2,7 @@
 import Logo from '@/components/Logo.vue';
 import { SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/vue3';
-import { Contact, MessageSquareMore } from 'lucide-vue-next';
+import { ContactRound, MessageSquareMore } from 'lucide-vue-next';
 
 const page = usePage<SharedData>();
 </script>
@@ -16,7 +16,7 @@ const page = usePage<SharedData>();
         <nav class="flex flex-col gap-y-2">
             <Link href="/contacts">
                 <div class="side-nav-item" :class="{ active: page.url === '/contacts' }">
-                    <span class="me-2"><Contact /></span> Contacts
+                    <span class="me-2"><ContactRound /></span> Contacts
                 </div>
             </Link>
 

@@ -1,15 +1,16 @@
 <script lang="ts" setup>
-import { User } from 'lucide-vue-next';
+import { LogOut } from 'lucide-vue-next';
 
-function showMenu() {
-    // Show profile menu
+function logOut() {
+    // TODO: logout logic
+    console.log('loggin out...');
 }
 </script>
 
 <template>
     <div class="p-10 text-end md:py-8 dark:text-white">
-        <button @click="showMenu()" class="btn">
-            <User />
+        <button @click="logOut()" class="btn">
+            <LogOut strokeWidth="2" />
         </button>
     </div>
 </template>
