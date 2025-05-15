@@ -24,4 +24,22 @@
     .form-label {
         @apply block text-sm text-gray-700;
     }
+
+    .side-nav-item {
+        @apply flex cursor-pointer items-center rounded-lg px-3 py-2 font-medium text-gray-700 dark:text-gray-300;
+    }
+
+    .side-nav-item.active,
+    .side-nav-item:hover {
+        @apply bg-green-800 text-white dark:bg-green-700;
+    }
+
+    .bottom-nav-item {
+        @apply flex flex-1 cursor-pointer flex-col items-center px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300;
+    }
+
+    .bottom-nav-item.active,
+    .bottom-nav-item:hover {
+        @apply text-green-800 font-semibold;
+    }
 }
