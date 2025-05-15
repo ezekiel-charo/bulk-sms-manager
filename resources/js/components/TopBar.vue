@@ -7,7 +7,7 @@ function showMenu() {
 </script>
 
 <template>
-    <div class="p-4 text-end md:px-24 md:py-8 dark:text-white">
+    <div class="p-10 text-end md:py-8 dark:text-white">
         <button @click="showMenu()" class="btn">
             <User />
         </button>
