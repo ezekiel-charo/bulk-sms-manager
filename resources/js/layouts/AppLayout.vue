@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import BottomNav from '@/components/BottomNav.vue';
 import SideNav from '@/components/SideNav.vue';
-import TopBar from '@/components/TopBar.vue';
 </script>
 
 <template>
@@ -10,11 +9,7 @@ import TopBar from '@/components/TopBar.vue';
     </div>
 
     <div class="md:ms-[200px]">
-        <div class="fixed top-0 right-0">
-            <TopBar />
-        </div>
-
-        <div class="mt-20 p-2 sm:mb-8 lg:p-6 lg:ps-20">
+        <div class="mt-10 p-4 sm:mb-8 lg:px-10 lg:ps-20">
             <slot />
         </div>
     </div>

@@ -37,3 +37,24 @@ export interface User {
 }
 
 export type BreadcrumbItemType = BreadcrumbItem;
+
+export interface Contact {
+    id: number;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+}
+
+export interface Message {
+    id: number;
+    recipientIds: number[];
+    numDelivered: number;
+    content: string;
+}
+
+export interface DeliveryReport {
+    id: number;
+    messageId: number;
+    recipientId: number;
+    delivered: boolean;
+}

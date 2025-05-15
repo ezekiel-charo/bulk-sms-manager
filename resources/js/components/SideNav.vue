@@ -2,13 +2,18 @@
 import Logo from '@/components/Logo.vue';
 import { SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/vue3';
-import { ContactRound, MessageSquareMore } from 'lucide-vue-next';
+import { ContactRound, LogOut, MessageSquareMore } from 'lucide-vue-next';
 
 const page = usePage<SharedData>();
+
+function logOut() {
+    // TODO: logout logic
+    console.log('loggin out...');
+}
 </script>
 
 <template>
-    <div class="p-8">
+    <div class="relative h-dvh p-8">
         <div class="mb-24 flex items-center">
             <Logo />
         </div>
@@ -26,5 +31,7 @@ const page = usePage<SharedData>();
                 </div>
             </Link>
         </nav>
+
+        <button @click="logOut()" class="btn absolute bottom-8 px-12"><LogOut strokeWidth="2" /> <span class="ms-1">Log Out</span></button>
     </div>
 </template>
