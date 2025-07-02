@@ -57,5 +57,7 @@ export interface DeliveryReport {
     id: number;
     message_id: number;
     recipient_id: number;
+    recipient_name: string;
+    recipient_number: string;
     delivered: boolean;
 }

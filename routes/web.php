@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DeliveryReportController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -19,9 +21,12 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('contacts/{id}', [ContactController::class, 'destroy']);
 
-    Route::get('messages', function () {
-        return Inertia::render('MessageList');
-    })->name('messages');
+    Route::get('messages', [MessageController::class, 'show'])->name('messages');
+
+    Route::get('messages/{id}/delivery-reports', [DeliveryReportController::class, 'show']);
+
+    Route::get('messages/compose', [MessageController::class, 'create']);
+    Route::post('messages', [MessageController::class, 'store']);
 });
 
 
