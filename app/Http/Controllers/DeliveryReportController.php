@@ -10,7 +10,7 @@ class DeliveryReportController extends Controller
 {
     function show(Request $request, $id): Response
     {
-        $message = $request->user()->messages()->findOrFail($id);
+        $message = $request->user()->messages()->with('recipients')->findOrFail($id);
         $deliveryReports = $message->recipients;
 
         return Inertia::render('DeliveryReportList', ['deliveryReports' => $deliveryReports]);

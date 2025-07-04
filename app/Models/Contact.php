@@ -13,11 +13,6 @@ class Contact extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function deliveryReports()
-    {
-        return $this->hasMany(DeliveryReport::class);
-    }
-
     public function recipients()
     {
         return $this->hasMany(MessageRecipient::class);

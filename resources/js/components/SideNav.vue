@@ -31,6 +31,8 @@ function logOut() {
             </Link>
         </nav>
 
-        <button @click="logOut()" class="btn absolute bottom-8 px-12"><LogOut strokeWidth="2" /> <span class="ms-1">Log Out</span></button>
+        <button @click="logOut()" class="btn absolute bottom-8 px-12 font-semibold">
+            <LogOut strokeWidth="2" /> <span class="ms-1">Log Out</span>
+        </button>
     </div>
 </template>
