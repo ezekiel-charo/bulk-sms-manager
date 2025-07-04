@@ -14,7 +14,7 @@ defineProps<{
         <div class="bg-muted relative hidden h-full flex-col p-10 text-white lg:flex dark:border-r">
             <div class="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900">
                 <span class="text-green-900">
-                    <MessageSquareMore size="120" strokeWidth="3" />
+                    <MessageSquareMore :size="120" strokeWidth="3" />
                 </span>
                 <p class="mt-3 text-sm font-medium text-gray-400">Engange customers via SMS</p>
             </div>
