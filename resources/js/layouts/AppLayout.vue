@@ -14,7 +14,7 @@ import SideNav from '@/components/SideNav.vue';
         </div>
     </div>
 
-    <div class="fixed right-0 bottom-0 left-0 bg-slate-50 md:hidden dark:bg-slate-900">
+    <div class="fixed right-0 bottom-0 left-0 bg-slate-50 md:hidden">
         <BottomNav />
     </div>
 </template>

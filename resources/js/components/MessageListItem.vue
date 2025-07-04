@@ -8,13 +8,13 @@ defineProps<{ message: Message }>();
 
 <template>
     <Link :href="`/messages/${message.id}/delivery-reports`">
-        <div class="flex cursor-pointer items-center border-b border-gray-200 p-2 pe-6 hover:bg-gray-50 dark:hover:bg-slate-900">
-            <span class="me-5 text-6xl text-gray-600 dark:text-stone-300">
+        <div class="flex cursor-pointer items-center border-b border-gray-200 p-2 pe-6 hover:bg-gray-50">
+            <span class="me-5 text-6xl text-gray-600">
                 <MessageCircle />
             </span>
 
-            <div class="grow dark:text-stone-300">
-                <div class="mb-1 text-sm font-medium text-gray-500 dark:text-gray-400">{{ message.content }}</div>
+            <div class="grow">
+                <div class="mb-1 text-sm font-medium text-gray-500">{{ message.content }}</div>
                 <div class="text-xs font-medium text-gray-600">
                     <span class="me-3">
                         Recipients:

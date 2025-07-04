@@ -6,8 +6,8 @@ defineProps<{ position: number; report: DeliveryReport }>();
 </script>
 
 <template>
-    <div class="grid cursor-pointer grid-cols-3 items-center gap-4 border-b border-gray-200 p-3 pe-6 hover:bg-gray-50 dark:hover:bg-slate-900">
-        <div class="flex grow items-center gap-2 font-medium text-gray-700 dark:text-gray-400">
+    <div class="grid cursor-pointer grid-cols-3 items-center gap-4 border-b border-gray-200 p-3 pe-6 hover:bg-gray-50">
+        <div class="flex grow items-center gap-2 font-medium text-gray-700">
             <span class="text-gray-500">{{ position }}.</span>
             <Contact />
             <span> {{ report.first_name }} {{ report.last_name }} </span>

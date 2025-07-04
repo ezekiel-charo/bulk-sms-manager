@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
     <div class="relative grid h-dvh flex-col items-center justify-center px-8 sm:px-0 lg:max-w-none lg:grid-cols-2 lg:px-0">
-        <div class="bg-muted relative hidden h-full flex-col p-10 text-white lg:flex dark:border-r">
+        <div class="bg-muted relative hidden h-full flex-col p-10 text-white lg:flex">
             <div class="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900">
                 <span class="text-green-900">
                     <MessageSquareMore :size="120" strokeWidth="3" />
