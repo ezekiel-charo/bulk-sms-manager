@@ -56,6 +56,11 @@ export interface Message {
 export interface DeliveryReport {
     id: number;
     message_id: number;
-    recipient_id: number;
-    delivered: boolean;
+    rcontact_id: number;
+    first_name: string;
+    last_name: string;
+    phone_number: string;
+    pivot: {
+        delivered: boolean;
+    };
 }

@@ -25,7 +25,7 @@ defineProps<{ message: Message }>();
             </div>
         </div>
 
-        <Link href="view-delivery-reports">
+        <Link :href="`/messages/${message.id}/delivery-reports`">
             <button class="btn text-primary">
                 <Eye :size="14" />
             </button>

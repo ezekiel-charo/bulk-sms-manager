@@ -6,10 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-    protected $fillable = ['first_name', 'first_name', 'phone_number'];
+    protected $fillable = ['first_name', 'last_name', 'phone_number'];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function recipients()
+    {
+        return $this->hasMany(MessageRecipient::class);
     }
 }

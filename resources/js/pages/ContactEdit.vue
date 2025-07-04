@@ -3,7 +3,7 @@ import InputError from '@/components/InputError.vue';
 import AppLayout from '@/layouts/AppLayout.vue';
 import { Contact } from '@/types';
 import { Link, useForm } from '@inertiajs/vue3';
-import { ArrowLeft } from 'lucide-vue-next';
+import { ArrowLeft, LoaderCircle } from 'lucide-vue-next';
 
 const props = defineProps<{ contact: Contact }>();
 
@@ -30,7 +30,7 @@ function submit() {
         <h1 class="sticky top-0 z-10 bg-white py-4 text-2xl font-bold">Edit Contact</h1>
 
         <form @submit.prevent="submit">
-            <div class="grid gap-6 lg:w-1/3">
+            <div class="grid gap-6 lg:w-120">
                 <div>
                     <label class="form-label" for="first-name">First Name</label>
                     <input id="first-name" type="text" required autofocus v-model="form.first_name" placeholder="First name" class="form-control" />

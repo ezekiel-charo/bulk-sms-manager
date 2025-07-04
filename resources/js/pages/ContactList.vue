@@ -3,7 +3,7 @@ import ContactListItem from '@/components/ContactListItem.vue';
 import EmptyState from '@/components/EmptyState.vue';
 import AppLayout from '@/layouts/AppLayout.vue';
 import { Contact } from '@/types';
-import { Link } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 import { Plus } from 'lucide-vue-next';
 
 defineProps<{ contacts: Contact[] }>();
