@@ -5,8 +5,6 @@ namespace App\Services;
 use AfricasTalking\SDK\AfricasTalking;
 use App\Models\AfricasTalkingCredentials;
 use App\Models\Contact;
-use App\Models\User;
-use Illuminate\Support\Facades\Log;
 
 class MessagingService
 {

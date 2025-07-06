@@ -11,7 +11,6 @@ use Inertia\Response;
 
 class MessageController extends Controller
 {
-
     function show(Request  $request): Response
     {
         $messages = $request->user()->messages()->orderBy('created_at', 'desc')->get();
@@ -57,7 +56,6 @@ class MessageController extends Controller
         $credentials = $request->user()->africasTalkingCredentials;
 
         $messagingService->sendMessages($credentials, $recipientIds, $message);
-
 
         return redirect('messages');
     }
