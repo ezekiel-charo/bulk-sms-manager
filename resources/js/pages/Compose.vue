@@ -47,7 +47,7 @@ function submit() {
 
                 <button type="submit" class="btn btn-primary" :disabled="form.processing">
                     <LoaderCircle v-if="form.processing" class="h-4 w-4 animate-spin" />
-                    Save
+                    Send
                 </button>
             </div>
         </form>

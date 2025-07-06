@@ -13,7 +13,7 @@ function deleteContact(id: number): void {
 </script>
 
 <template>
-    <div class="flex cursor-pointer items-center border-b border-gray-200 p-2 pe-6 hover:bg-gray-50">
+    <div class="flex items-center border-b border-gray-200 p-2 pe-6 hover:bg-gray-50">
         <span class="me-5 text-6xl text-gray-600">
             <ContactRound />
         </span>

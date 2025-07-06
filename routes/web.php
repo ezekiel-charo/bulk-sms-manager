@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AfricasTalkingCredentialsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DeliveryReportController;
 use App\Http\Controllers\MessageController;
@@ -27,6 +28,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('messages/compose', [MessageController::class, 'create']);
     Route::post('messages', [MessageController::class, 'store']);
+
+    Route::get('sms-credentials', [AfricasTalkingCredentialsController::class, 'create'])->name('credentials');
+    Route::post('sms-credentials', [AfricasTalkingCredentialsController::class, 'store']);
 });
 
 

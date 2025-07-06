@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\MessagingService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +24,7 @@ class MessageController extends Controller
         return Inertia::render('Compose', ['contacts' => $contacts]);
     }
 
-    function store(Request $request): RedirectResponse
+    function store(Request $request, MessagingService $messagingService): RedirectResponse
     {
         $validated = $request->validate([
             'content' => 'required|string',
@@ -31,23 +32,21 @@ class MessageController extends Controller
             'recipient_ids.*' => 'integer|exists:contacts,id'
         ]);
 
-        // TODO: Send Messages and then get delivery reports from response
-        // TODO: Create a web hook for updating delivery status
+        $recipientIds = $validated['recipient_ids'];
+        $message = $validated['content'];
 
-        DB::transaction(function () use ($request, $validated) {
-            $numDelivered = 2; // TODO: Set from AT response
-            $recipients = $validated['recipient_ids'];
-
-            // Build delivery status data for each recipient
+        DB::transaction(function () use ($request, $validated, $recipientIds, $message) {
             $pivotData = [];
-            foreach ($recipients as $id) {
-                $pivotData[$id] = ['delivered' => false]; // TODO: Set status from AT response
+
+            foreach ($recipientIds as $id) {
+                // Set delivery status for each recipient
+                $pivotData[$id] = ['delivered' => false];
             }
 
             $message = [
-                'content' => $validated['content'],
-                'num_recipients' => count($validated['recipient_ids']),
-                'num_delivered' => $numDelivered,
+                'content' => $message,
+                'num_recipients' => count($recipientIds),
+                'num_delivered' => 0,
             ];
 
             $message = $request->user()->messages()->create($message);
@@ -55,6 +54,13 @@ class MessageController extends Controller
             $message->recipients()->attach($pivotData);
         });
 
+        $credentials = $request->user()->africasTalkingCredentials;
+
+        $messagingService->sendMessages($credentials, $recipientIds, $message);
+
+
         return redirect('messages');
     }
+
+    // TODO: Create a web hook for updating delivery status
 }

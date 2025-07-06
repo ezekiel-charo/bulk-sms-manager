@@ -55,4 +55,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Message::class);
     }
+
+    public function africasTalkingCredentials()
+    {
+        return $this->hasOne(AfricasTalkingCredentials::class);
+    }
 }

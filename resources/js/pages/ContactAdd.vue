@@ -36,13 +36,13 @@ function submit() {
 
                 <div>
                     <label class="form-label" for="last-name">Last Name</label>
-                    <input id="last-name" type="text" autofocus v-model="form.last_name" placeholder="Last name" class="form-control" />
+                    <input id="last-name" type="text" v-model="form.last_name" placeholder="Last name" class="form-control" />
                     <InputError :message="form.errors.last_name" />
                 </div>
 
                 <div>
                     <label class="form-label" for="phone">Phone Number</label>
-                    <input id="phone" type="tel" required autofocus v-model="form.phone_number" placeholder="Phone number" class="form-control" />
+                    <input id="phone" type="tel" required v-model="form.phone_number" placeholder="Phone number" class="form-control" />
                     <InputError :message="form.errors.phone_number" />
                 </div>
 
